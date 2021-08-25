@@ -26,6 +26,15 @@
   flex-direction: column;
 }
 
+.fullname {
+  display: flex;
+  justify-content: center;
+}
+
+.fullname input {
+  margin: 15px;
+}
+
 #trybewarts-forms-logo {
   height: 500px;
 }
