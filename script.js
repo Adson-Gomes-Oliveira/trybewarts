@@ -2,7 +2,7 @@ function logInValidation() {
   const logInButton = document.querySelector('#button-header');
 
   logInButton.addEventListener('click', (event) => {
-    const userEmail = document.querySelector('#input-email').value;
+    const userEmail = document.querySelector('#email-input').value;
     const userPassword = document.querySelector('#input-password').value;
 
     event.preventDefault();

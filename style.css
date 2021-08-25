@@ -35,6 +35,19 @@
   margin: 15px;
 }
 
+.email-house {
+  display: flex;
+  justify-content: center;
+}
+
+.email-house input {
+  margin: 15px;
+}
+
+.email-house label {
+  margin: 15px;
+}
+
 #trybewarts-forms-logo {
   height: 500px;
 }

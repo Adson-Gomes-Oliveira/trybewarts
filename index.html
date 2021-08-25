@@ -18,7 +18,7 @@
 
     <form action="" class="trybewarts-login">
 
-      <input type="email" name="email" id="input-email" class="input-header" placeholder="Email">
+      <input type="email" name="email" id="email-input" class="input-header" placeholder="Email">
       <input type="password" name="password" id="input-password" class="input-header" placeholder="Senha">
       <button type="submit" id="button-header">Entrar</button>
 
@@ -31,14 +31,17 @@
         <input type="text" name="" id="input-name" placeholder="Nome">
         <input type="text" name="" id="input-lastname" placeholder="Sobrenome">
       </div>
-      <input type="email" name="" id="input-email" placeholder="Email">
 
-      <select name="" id="house">
-        <option value="Gitnória" id="gitnoria-house">Gitnória</option>
-        <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
-        <option value="Corvinode" id="corvinode-house">Corvinode</option>
-        <option value="Pytherina" id="pytherina-house">Pytherina</option>
-      </select>
+      <div class="email-house">
+        <input type="email" id="input-email" placeholder="Email">
+        <label for="house">Casa: </label>
+        <select name="" id="house">
+          <option value="Gitnória" id="gitnoria-house">Gitnória</option>
+          <option value="Reactpuff" id="reactpuff-house">Reactpuff</option>
+          <option value="Corvinode" id="corvinode-house">Corvinode</option>
+          <option value="Pytherina" id="pytherina-house">Pytherina</option>
+        </select>
+      </div>
     </form>
     <img src="images/trybewarts-colored.svg" alt="Trybewarts Shield" id="trybewarts-forms-logo">
   </main>
