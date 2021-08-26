@@ -15,6 +15,25 @@ function logInValidation() {
   });
 }
 
+function formsButtom() {
+  const submitButton = document.querySelector('#submit-btn');
+  const checkbox = document.querySelector('#agreement');
+
+  submitButton.setAttribute('disabled', 'disabled');
+
+  checkbox.addEventListener('click', () => {
+    const checkboxValue = document.querySelector('#agreement');
+
+    if (checkboxValue.checked) {
+      submitButton.removeAttribute('disabled', 'disabled');
+      return;
+    }
+
+    submitButton.setAttribute('disabled', 'disabled');
+  });
+}
+
 window.onload = () => {
   logInValidation();
+  formsButtom();
 };
