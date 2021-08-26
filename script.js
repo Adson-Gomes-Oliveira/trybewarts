@@ -33,7 +33,23 @@ function formsButtom() {
   });
 }
 
+function counterText() {
+  const textArea = document.querySelector('#textarea');
+  const maxArea = 500;
+  let counterSpan = document.querySelector('#counter');
+ 
+  counterSpan.innerHTML = maxArea;
+
+  textArea.addEventListener('input', () => {
+    const areaValue = textArea.value;
+    const areaValueSize = areaValue.length;
+
+    counterSpan.innerHTML = maxArea - areaValueSize;
+  });
+}
+
 window.onload = () => {
   logInValidation();
   formsButtom();
+  counterText();
 };
