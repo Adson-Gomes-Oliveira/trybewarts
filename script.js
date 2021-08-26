@@ -1,9 +1,9 @@
 function logInValidation() {
-  const logInButton = document.querySelector('#button-header');
+  const logInButton = document.querySelector('#trybewarts-button-header');
 
   logInButton.addEventListener('click', (event) => {
-    const userEmail = document.querySelector('#email-input').value;
-    const userPassword = document.querySelector('#input-password').value;
+    const userEmail = document.querySelector('#trybewarts-input-emal').value;
+    const userPassword = document.querySelector('#trybewarts-input-password').value;
 
     event.preventDefault();
 
