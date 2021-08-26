@@ -74,3 +74,7 @@
 .radio-family-row {
   display: flex;
 }
+
+.checkbox-agreement {
+  display: flex;
+}
