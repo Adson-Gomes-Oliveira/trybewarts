@@ -70,3 +70,7 @@
 .checkbox-content-value {
   flex-flow: wrap row;
 }
+/* 
+.radio-family-row {
+  display: flex;
+} */
