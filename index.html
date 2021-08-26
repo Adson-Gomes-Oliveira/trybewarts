@@ -46,36 +46,37 @@
       <div class="radio-family">
         <label id="label-family">Qual sua família?</label>
         <div class="radio-family">
-          <label for=""><input type="radio" name="family" value="Frontend">Familia Frontend</label>
-          <label for=""><input type="radio" name="family" value="Backend">Familia Backend</label>
-          <label for=""><input type="radio" name="family" value="FullStack">Familia FullStack</label>
+          <label for=""><input type="radio" name="family" class="family-class" value="Frontend">Familia Frontend</label>
+          <label for=""><input type="radio" name="family" class="family-class" value="Backend">Familia Backend</label>
+          <label for=""><input type="radio" name="family" class="family-class" value="FullStack">Familia
+            FullStack</label>
         </div>
       </div>
 
       <div class="checkbox-content">
         <label id="label-content">Qual conteúdo você está com mais vontade de aprender?</label>
         <div class="checkbox-content-value">
-          <label><input type="checkbox" value="HoFs"> HoFs</label>
-          <label><input type="checkbox" value="Jest"> Jest</label>
-          <label><input type="checkbox" value="Promises"> Promises</label>
-          <label><input type="checkbox" value="React"> React</label>
-          <label><input type="checkbox" value="SQL"> SQL</label>
-          <label><input type="checkbox" value="Python"> Python</label>
+          <label><input type="checkbox" class="lesson" value="HoFs"> HoFs</label>
+          <label><input type="checkbox" class="lesson" value="Jest"> Jest</label>
+          <label><input type="checkbox" class="lesson" value="Promises"> Promises</label>
+          <label><input type="checkbox" class="lesson" value="React"> React</label>
+          <label><input type="checkbox" class="lesson" value="SQL"> SQL</label>
+          <label><input type="checkbox" class="lesson" value="Python"> Python</label>
         </div>
       </div>
 
       <div class="radio-family-row">
         <label for="" id="label-rate">Como você avalia a Trybewarts?</label>
-        <label><input type="radio" name="rate" value="1">1</label>
-        <label><input type="radio" name="rate" value="2">2</label>
-        <label><input type="radio" name="rate" value="3">3</label>
-        <label><input type="radio" name="rate" value="4">4</label>
-        <label><input type="radio" name="rate" value="5">5</label>
-        <label><input type="radio" name="rate" value="6">6</label>
-        <label><input type="radio" name="rate" value="7">7</label>
-        <label><input type="radio" name="rate" value="8">8</label>
-        <label><input type="radio" name="rate" value="9">9</label>
-        <label><input type="radio" name="rate" value="10">10</label>
+        <label><input type="radio" class="rate" name="rate" value="1">1</label>
+        <label><input type="radio" class="rate" name="rate" value="2">2</label>
+        <label><input type="radio" class="rate" name="rate" value="3">3</label>
+        <label><input type="radio" class="rate" name="rate" value="4">4</label>
+        <label><input type="radio" class="rate" name="rate" value="5">5</label>
+        <label><input type="radio" class="rate" name="rate" value="6">6</label>
+        <label><input type="radio" class="rate" name="rate" value="7">7</label>
+        <label><input type="radio" class="rate" name="rate" value="8">8</label>
+        <label><input type="radio" class="rate" name="rate" value="9">9</label>
+        <label><input type="radio" class="rate" name="rate" value="10">10</label>
       </div>
 
       <div>
@@ -91,6 +92,7 @@
 
       <button type="submit" id="submit-btn">Enviar</button>
     </form>
+    <div id="data-form"></div>
     <img src="images/trybewarts-colored.svg" alt="Trybewarts Shield" id="trybewarts-forms-logo">
   </main>
   <footer>
