@@ -1,3 +1,4 @@
+/*-------------GENERAL SETTINGS-------------*/
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +6,39 @@
 }
 
 main {
-  background: rgba(0, 0, 0, 0.65)
-    url(https://wallpaperaccess.com/full/22917.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-blend-mode: darken;
   font-weight: 700;
   color: aliceblue;
 }
 
+#main-container {
+  background: rgba(0, 0, 0, 0.55) url(images/Castle.webp);
+}
+
+button {
+  border-radius: 5px;
+  border: 0;
+}
+
+input {
+  border-radius: 5px;
+  border: 0;
+  padding-left: 5px;
+}
+
+/*-------------HEADER SETTINGS-------------*/
 #header {
   display: flex;
   background-color: #0b3f30;
   height: 90px;
   justify-content: space-between;
   padding: 0 15px;
+}
+
+#trybewarts-header-logo {
+  width: 80px;
 }
 
 #trybewarts-header-title {
@@ -44,126 +64,82 @@ main {
   margin: 0 5px;
 }
 
+/*-------------MAIN SETTINGS-------------*/
+#main-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*-------------GENERAL FORMS SETTINGS-------------*/
+#evaluation-form {
+  display: flex;
+  width: 675px;
+  flex-direction: column;
+}
+
 #evaluation-form h2 {
   margin: 30px 0;
   align-self: center;
+}
+
+#trybewarts-forms-logo {
+  height: 450px;
+  align-self: center;
+}
+/*-------------FIRST SECTION FORMS SETTINGS-------------*/
+#first-section-form {
+  margin-bottom: 15px;
 }
 
 #first-section-form input {
   height: 35px;
 }
 
-#first-section-form {
+#fullname {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 15px;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-#house-label {
-  align-self: center;
-  margin-left: 15px;
+#email-house {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #house {
   height: 30px;
-  width: 251px;
+  width: 252px;
   text-align: center;
 }
 
-.main-container {
-  display: flex;
-  justify-content: space-around;
-}
-
-.form-container {
-  display: flex;
-  width: 675px;
-  flex-direction: column;
-}
-
-#fullname {
-  display: flex;
-  justify-content: flex-start;
-  margin-bottom: 10px;
-}
-
-#first {
-  align-self: flex-start;
-}
-
-#last {
-  margin: 0 15px;
-}
-
-.email-house {
-  display: flex;
-  justify-content: flex-start;
-}
-
-#trybewarts-forms-logo {
-  height: 400px;
-  align-self: center;
-}
-
-#trybewarts-header-logo {
-  width: 80px;
-}
-
-#label-family {
-  display: flex;
-  flex-direction: column;
-}
-
-.radio-family {
-  display: flex;
-  flex-direction: column;
-}
-
-.checkbox-content {
-  display: flex;
-  flex-direction: column;
-}
-
-.checkbox-content-value {
-  flex-flow: wrap row;
-}
-
-.radio-family-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#ratings {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 15px;
-}
-
-#text-area {
-  display: flex;
-  flex-direction: column;
-}
-
-.checkbox-agreement {
-  display: flex;
-  margin-bottom: 15px;
-}
-
-#agreement {
-  margin-left: 5px;
-}
-
-#submit-btn {
-  height: 40px;
-  margin-bottom: 15px;
-}
-
+/*-------------SECOND SECTION FORMS SETTINGS-------------*/
 #second-section-form {
   display: flex;
   justify-content: space-between;
-  margin: 0 15px;
   margin-bottom: 15px;
+}
+
+#radio-family {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-family {
+  margin-bottom: 10px;
+}
+
+#checkbox-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#label-content {
+  margin-bottom: 10px;
+}
+
+#checkbox-content-value {
+  flex-flow: row wrap;
 }
 
 #checkbox-1 {
@@ -177,16 +153,81 @@ main {
   justify-content: space-between;
 }
 
-#label-family {
-  margin-bottom: 10px;
+/*-------------THIRD SECTION FORMS SETTINGS-------------*/
+#third-section-form {
+  text-align: center;
 }
 
-#label-content {
-  margin-bottom: 10px;
+#ratings {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
 }
 
+#text-area {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/*-------------FOURTH SECTION FORMS SETTINGS-------------*/
+#fourth-section-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#checkbox-agreement {
+  margin: 15px 0;
+}
+
+#agreement {
+  margin-left: 5px;
+}
+
+#submit-btn {
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+/*-------------DATA SETTINGS-------------*/
+#get-data {
+  align-self: center;
+  width: 675px;
+}
+
+#data-from-form {
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#data-from-form strong {
+  margin-right: 5px;
+}
+
+#lore-house {
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 10px;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+#lore-house h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.division {
+  background-color: cornsilk;
+  width: 675px;
+  height: 1px;
+  margin-bottom: 15px;
+}
+
+/*-------------FOOTER SETTINGS-------------*/
 footer {
-  background-color: #331603;
+  background-color: #160901;
   color: #fff;
   padding: 15px;
   text-align: center;
