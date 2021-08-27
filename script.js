@@ -70,15 +70,18 @@ function getText() {
 }
 
 function getName() {
-  const fullName = document.querySelector('.fullname');
+  const fullName = document.querySelector('#fullname');
   const paragraph = document.createElement('p');
   const retrieveName = document.querySelector('#input-name');
   const retrieveLast = document.querySelector('#input-lastname');
-
+  const retrieveLabel1 = document.querySelector('#first');
+  const retrieveLabel2 = document.querySelector('#last')
   paragraph.innerText = `Nome: ${retrieveName.value} ${retrieveLast.value}`;
 
   retrieveName.remove();
+  retrieveLabel1.remove();
   retrieveLast.remove();
+  retrieveLabel2.remove();
 
   fullName.appendChild(paragraph);
 }
@@ -87,10 +90,12 @@ function getEmail() {
   const emailDiv = document.querySelector('.email-house');
   const paragraph = document.createElement('p');
   const retrieveEmail = document.querySelector('#input-email');
+  const label = document.querySelector('#label-email')
 
-  paragraph.innerText = `Email: ${retrieveEmail.value}`;
+  paragraph.innerText = `Email: ${retrieveEmail.value}||`;
 
   retrieveEmail.remove();
+  label.remove();
 
   emailDiv.appendChild(paragraph);
 }
