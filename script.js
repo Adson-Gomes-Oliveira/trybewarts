@@ -1,4 +1,4 @@
-const form = document.querySelector('#data-form');
+const submitButton = document.querySelector('#submit-btn');
 
 function logInValidation() {
   const logInButton = document.querySelector('#trybewarts-button-header');
@@ -18,7 +18,6 @@ function logInValidation() {
 }
 
 function formsButtom() {
-  const submitButton = document.querySelector('#submit-btn');
   const checkbox = document.querySelector('#agreement');
 
   submitButton.setAttribute('disabled', 'disabled');
@@ -51,58 +50,71 @@ function counterText() {
 }
 
 function getText() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
-  const retrieveTextArea = document.querySelector('#textarea').value;
+  const textDiv = document.querySelector('#text-area');
+  const paragraph = document.createElement('p');
+  const retrieveTextArea = document.querySelector('#textarea');
+  const retrieveTextAreaLabel = document.querySelector('.textarea');
+  const retrieveCheckboxAgree = document.querySelector('.checkbox-agreement');
+  const retrieveButton = document.querySelector('#submit-btn');
+  const span = document.querySelector('#counter');
 
-  createLabel.innerText = 'Observações: ';
-  createListItem.innerText = retrieveTextArea;
+  paragraph.innerText = `Observações: ${retrieveTextArea.value}`;
 
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  retrieveTextArea.remove();
+  retrieveTextAreaLabel.remove();
+  retrieveCheckboxAgree.remove();
+  retrieveButton.remove();
+  span.remove();
+
+  textDiv.appendChild(paragraph);
 }
 
 function getName() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
-  const retrieveName = document.querySelector('#input-name').value;
-  const retrieveLast = document.querySelector('#input-lastname').value;
+  const fullName = document.querySelector('.fullname');
+  const paragraph = document.createElement('p');
+  const retrieveName = document.querySelector('#input-name');
+  const retrieveLast = document.querySelector('#input-lastname');
 
-  createLabel.innerText = 'Nome: ';
-  createListItem.innerText = `${retrieveName} ${retrieveLast}`;
+  paragraph.innerText = `Nome: ${retrieveName.value} ${retrieveLast.value}`;
 
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  retrieveName.remove();
+  retrieveLast.remove();
+
+  fullName.appendChild(paragraph);
 }
 
 function getEmail() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
-  const retrieveEmail = document.querySelector('#input-email').value;
+  const emailDiv = document.querySelector('.email-house');
+  const paragraph = document.createElement('p');
+  const retrieveEmail = document.querySelector('#input-email');
 
-  createLabel.innerText = 'Email: ';
-  createListItem.innerText = retrieveEmail;
+  paragraph.innerText = `Email: ${retrieveEmail.value}`;
 
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  retrieveEmail.remove();
+
+  emailDiv.appendChild(paragraph);
 }
 
 function getHouse() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
-  const retrieveHouse = document.querySelector('#house').value;
+  const emailDiv = document.querySelector('.email-house');
+  const paragraph = document.createElement('p');
+  const retrieveHouse = document.querySelector('#house');
+  const retrieveHouseLabel = document.querySelector('#house-label');
 
-  createLabel.innerText = 'Casa: ';
-  createListItem.innerText = retrieveHouse;
+  paragraph.innerText = `Casa: ${retrieveHouse.value}`;
 
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  retrieveHouse.remove();
+  retrieveHouseLabel.remove();
+
+  emailDiv.appendChild(paragraph);
 }
 
 function getFamily() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
+  const familyDiv = document.querySelector('#label-family-id');
+  const paragraph = document.createElement('p');
   const retrieveFamily = document.querySelectorAll('.family-class');
+  const retrieveFamilyLabel = document.querySelector('#label-family');
+  const retrieveInternalFamilyDiv = document.querySelector('#radio-family');
   let getUserFamily = '';
 
   for (let index = 0; index < retrieveFamily.length; index += 1) {
@@ -111,36 +123,39 @@ function getFamily() {
     }
   }
 
-  createLabel.innerText = 'Família: ';
-  createListItem.innerText = getUserFamily;
+  paragraph.innerText = `Família: ${getUserFamily}`;
+  retrieveFamilyLabel.remove();
+  retrieveInternalFamilyDiv.remove();
 
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  familyDiv.appendChild(paragraph);
 }
 
 function getLesson() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
-  const retrieveLessons = document.querySelectorAll('.lesson');
+  const lessonDiv = document.querySelector('.checkbox-content');
+  const paragraph = document.createElement('p');
+  const retrieveLessons = document.querySelectorAll('.subject');
+  const retrieveLessonsLabel = document.querySelector('#label-content');
+  const retrieveLessonsCheckbox = document.querySelector('.checkbox-content-value');
   let getUserLessons = '';
 
   for (let index = 0; index < retrieveLessons.length; index += 1) {
     if (retrieveLessons[index].checked) {
-      getUserLessons = `${getUserLessons} ${retrieveLessons[index].value}`;
+      getUserLessons = `${getUserLessons}, ${retrieveLessons[index].value}`;
     }
   }
-
-  createLabel.innerText = 'Matérias: ';
-  createListItem.innerText = getUserLessons;
-
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  getUserLessons = getUserLessons.replace(',', '');
+  paragraph.innerText = `Matérias: ${getUserLessons}`;
+  retrieveLessonsLabel.remove();
+  retrieveLessonsCheckbox.remove();
+  lessonDiv.appendChild(paragraph);
 }
 
 function rating() {
-  const createListItem = document.createElement('li');
-  const createLabel = document.createElement('strong');
+  const rateDiv = document.querySelector('.radio-family-row');
+  const paragraph = document.createElement('p');
   const retrieveRate = document.querySelectorAll('.rate');
+  const retrieveRateLabel = document.querySelector('#label-rate');
+  const retrieveRateDiv = document.querySelector('#ratings');
   let getUserRate = '';
 
   for (let index = 0; index < retrieveRate.length; index += 1) {
@@ -148,12 +163,12 @@ function rating() {
       getUserRate = retrieveRate[index].value;
     }
   }
+  paragraph.innerText = `Avaliação: ${getUserRate}`;
 
-  createLabel.innerText = 'Avaliação: ';
-  createListItem.innerText = getUserRate;
+  retrieveRateLabel.remove();
+  retrieveRateDiv.remove();
 
-  createListItem.insertAdjacentElement('afterbegin', createLabel);
-  form.appendChild(createListItem);
+  rateDiv.appendChild(paragraph);
 }
 
 function generateData() {
@@ -167,14 +182,9 @@ function generateData() {
 }
 
 function submitBtn() {
-  const submitButton = document.querySelector('#submit-btn');
-
   submitButton.addEventListener('click', (event) => {
     event.preventDefault();
     generateData();
-    const dataForm = document.querySelector('#evaluation-form');
-
-    dataForm.remove();
   });
 }
 
